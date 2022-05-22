@@ -55,6 +55,29 @@ npx create-react-app \
   put-your-project-name-here
 ```
 
+You'll probably need to change `package.json` to change React dependency from whatever
+the version was set, to React 16 & friends, like shown below:
+
+```json
+{
+  "dependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "3.4.1"
+  }
+}
+```
+
+I'd recommend deleting `node_modules` and `package-lock.json`, and re-installing modules:
+
+```shell
+rm -rf node_modules
+rm -f package-lock.json
+npm install
+```
+
+That should make it so you can install React 16 in a new project and start playing with Enzyme.
+
 ## Reference Links
 
 * https://axios-http.com/docs/res_schema
@@ -71,6 +94,10 @@ npx create-react-app \
 * https://testing-library.com/docs/react-testing-library/cheatsheet/
 * https://www.digitalocean.com/community/tutorials/how-to-test-a-react-app-with-jest-and-react-testing-library#step-1-setting-up-the-project
 * https://www.w3.org/TR/html-aria/#docconformance
+* https://enzymejs.github.io/enzyme/
+* https://enzymejs.github.io/enzyme/docs/api/
+* https://enzymejs.github.io/enzyme/docs/api/shallow.html
+* https://enzymejs.github.io/enzyme/docs/guides/jest.html
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

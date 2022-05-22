@@ -32,7 +32,7 @@ describe('ToDos DAL List', function() {
     it('should reject when there\'s a network error', async function() {
         const toDos = new ToDos(mockURI);
         axios.get.mockRejectedValue(new Error('mock network error'));
-        await expect(() => toDos.list()).rejects.toThrowError(/network error/);
+        await expect(toDos.list()).rejects.toThrowError(/network error/);
     });
 });
 

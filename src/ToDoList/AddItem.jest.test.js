@@ -1,5 +1,5 @@
+import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import { fireInputEvent } from "@testing-library/user-event/dist/keyboard/shared";
 import AddItem from "./AddItem";
 
 describe('Add Item Component', function() {
@@ -10,12 +10,10 @@ describe('Add Item Component', function() {
         expect(theLabel).toBeInTheDocument();
         const theTextField = screen.getByRole("textbox", { name: /New/i });
         expect(theTextField).toBeInTheDocument();
-        const theSubmitButton = screen.getByRole("button", { name: /Add/i });
+        const theSubmitButton = screen.getByRole("button");
         expect(theSubmitButton).toBeInTheDocument();
-        fireInputEvent(
-            theTextField,
-            { newValue: 'My new value' }
-        );
+        const textInputEvent = { target: { value: "My new value" } };
+        fireEvent.input(theTextField, textInputEvent);
         expect(theTextField).toHaveValue('My new value');
         fireEvent.click(theSubmitButton);
         expect(mockOnAdd).toHaveBeenCalledTimes(1);
