@@ -1,0 +1,20 @@
+.todo-list {
+  .error-show {
+    display: block;
+  }
+
+  .error-hidden {
+    display: none;
+  }
+
+  .todos-hidden {
+    display: none;
+  }
+
+  ul {
+    margin-top: 2rem;
+    li {
+      margin-top: 1rem;
+    }
+  }
+}

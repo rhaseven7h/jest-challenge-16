@@ -1,0 +1,21 @@
+form.todo-add {
+  label {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  input[type=text] {
+    margin-left: 1rem;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+  }
+
+  input[type=submit] {
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    margin-left: 1rem;
+  }
+}

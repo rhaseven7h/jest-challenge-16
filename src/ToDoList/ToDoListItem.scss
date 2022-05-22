@@ -1,0 +1,19 @@
+
+.todo-list-item {
+  .completed {
+    text-decoration: line-through;
+  }
+
+  .todo-title {
+    margin-left: 1rem;
+  }
+
+  .todo-delete-button {
+    cursor: pointer;
+    background-color: darkred;
+    color: white;
+    border-radius: 10px;
+    padding: 0.25rem 0.5rem;
+    margin-left: 1rem;
+  }
+}
